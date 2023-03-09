@@ -1,0 +1,121 @@
+python manage.py shell
+from news.models import *
+
+--1. Создать двух пользователей (с помощью метода User.objects.create_user('username')).
+User.objects.create_user('John')
+User.objects.create_user('Mike')
+
+--2. Создать два объекта модели Author, связанные с пользователями.
+u1 = User.objects.all()[0]
+u2 = User.objects.all()[1]
+Author.objects.create(user=u1)
+Author.objects.create(user=u2)
+
+--3.Добавить 4 категории в модель Category.
+Category.objects.create(category='sp')
+Category.objects.create(category='wd')
+Category.objects.create(category='ec')
+Category.objects.create(category='hh')
+
+--4/5. Добавить 2 статьи и 1 новость. Присвоить им категории (как минимум в одной статье/новости должно быть не меньше 2 категорий).
+au1 = Author.objects.first()
+p1 = Post.list_type[0][0]
+ca1 =  Category.objects.all()[0]
+ca2 =  Category.objects.all()[1]
+
+Post.objects.create(author = au1, post_type =p1, title='Some title', text_post = 'Some text of the post')
+Post.objects.first().category.add(ca1,ca2)
+
+au2 = Author.objects.last()
+p2 = Post.list_type[1][0]
+ca =  Category.objects.all()[2]
+
+Post.objects.create(author = au2, post_type =p2, title='Some title of the 1-st article', text_post = 'Some text of the 1-st article')
+Post.objects.get(pk=6).category.add(ca)
+
+au2 = Author.objects.last()
+p2 = Post.list_type[1][0]
+ca =  Category.objects.all()[3]
+
+Post.objects.create(author = au2, post_type =p2, title='Some title of the 2-st article', text_post = 'Some text of the 2-st article')
+Post.objects.get(pk=7).category.add(ca)
+
+--6. Создать как минимум 4 комментария к разным объектам модели Post (в каждом объекте должен быть как минимум один комментарий).
+p1 = Post.objects.all()[0]
+us1 = User.objects.first()
+Comment.objects.create(post = p1, user = us1, text_comment = 'comment #1')
+
+p1 = Post.objects.all()[0]
+us2 = User.objects.last()
+Comment.objects.create(post = p1, user = us2, text_comment = 'comment #2')
+
+p2 = Post.objects.all()[1]
+us1 = User.objects.first()
+Comment.objects.create(post = p2, user = us1, text_comment = 'comment #3')
+
+p3 = Post.objects.all()[2]
+us2 = User.objects.last()
+Comment.objects.create(post = p3, user = us2, text_comment = 'comment #4')
+
+--7. Применяя функции like() и dislike() к статьям/новостям и комментариям, скорректировать рейтинги этих объектов.
+p1 = Post.objects.get(pk=1)
+p1.like()
+p1.like()
+p1.dislike()
+
+p2 = Post.objects.get(pk=3)
+p2.like()
+p2.like()
+p2.like()
+p2.dislike()
+
+p3 = Post.objects.get(pk=4)
+p3.like()
+p3.like()
+p3.like()
+p3.like()
+p3.dislike()
+
+c1 = Comment.objects.get(pk=1)
+c1.like()
+c1.like()
+c1.dislike()
+
+c2 = Comment.objects.get(pk=2)
+c2.like()
+c2.like()
+c2.like()
+c2.dislike()
+
+c3 = Comment.objects.get(pk=3)
+c3.like()
+c3.like()
+c3.like()
+c3.like()
+c3.dislike()
+
+c4 = Comment.objects.get(pk=4)
+c4.like()
+c4.like()
+c4.like()
+c4.like()
+c4.like()
+c4.dislike()
+
+8.Обновить рейтинги пользователей.
+
+us1 = Author.objects.first()
+us1.update_rating()
+
+us2 = Author.objects.last()
+us2.update_rating()
+
+--9.Вывести username и рейтинг лучшего пользователя (применяя сортировку и возвращая поля первого объекта).
+
+Author.objects.order_by('-rating').first().user.username, Author.objects.order_by('-rating').first().rating
+
+--10. Вывести дату добавления, username автора, рейтинг, заголовок и превью лучшей статьи, основываясь на лайках/дислайках к этой статье.
+Post.objects.order_by('-rating').first().time_create, Post.objects.order_by('-rating').first().author.user.username, Post.objects.order_by('-rating').first().rating, Post.objects.order_by('-rating').first().preview()
+
+--11. Вывести все комментарии (дата, пользователь, рейтинг, текст) к этой статье.
+Post.objects.order_by('-rating').first().comment_set.values()
