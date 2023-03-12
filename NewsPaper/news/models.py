@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
 from django.db.models import Avg, Count, Min, Sum
+from django.urls import reverse
 
 sport = 'sp'
 policy = 'py'
@@ -30,10 +31,13 @@ class Author(models.Model):
     rating = models.FloatField(default=0.0)
 
     def update_rating(self):
-        posts_author = Post.objects.filter(author=self).aggregate(Sum('rating'))['rating__sum'] * 3
+        posts_author = Post.objects.filter(author=self).aggregate(Sum('rating'))['rating__sum']
+        s1 = 0 if not posts_author else posts_author
         comments_author = Comment.objects.filter(user=self.user).aggregate(Sum('rating'))['rating__sum']
+        s2 = 0 if not comments_author else comments_author
         comments_others = Comment.objects.filter(post__author__user=self.user).aggregate(Sum('rating'))['rating__sum']
-        self.rating = posts_author + comments_author + comments_others
+        s3 = 0 if not comments_others else comments_others
+        self.rating = s1 * 3 + s2 + s3
         self.save()
 
     def mfoo(self):
@@ -63,6 +67,13 @@ class Post(models.Model):
 
     def preview(self):
         return f'{self.text_post[:124]}...'
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[str(self.id)])
+
+    def __str__(self):
+        return f'{self.title.title()}: {self.text[:20]}'
+
 
 
 class PostCategory(models.Model):
