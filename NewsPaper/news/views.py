@@ -6,19 +6,19 @@ from .forms import PostForm
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+
 class PostsList(ListView):
     model = Post
     ordering = '-time_create'
     template_name = 'posts.html'
     context_object_name = 'posts'
-    paginate_by = 5  # вот так мы можем указать количество записей на странице
+    paginate_by = 10  # вот так мы можем указать количество записей на странице
 
     def get_filter(self):
         return PostFilter(self.request.GET, queryset=super().get_queryset())
 
-
     def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data( *args,**kwargs)
+        context = super().get_context_data(*args, **kwargs)
         context['time_now'] = datetime.utcnow()
         return context
 
@@ -27,6 +27,7 @@ class PostDetail(DetailView):
     model = Post
     template_name = 'post.html'
     context_object_name = 'post'
+
 
 class SearchList(ListView):
     model = Post
@@ -56,6 +57,7 @@ class NewsCreate(CreateView):
         news._type = 'ns'
         return super().form_valid(form)
 
+
 class ArticleCreate(CreateView):
     form_class = PostForm
     model = Post
@@ -66,19 +68,21 @@ class ArticleCreate(CreateView):
         article._type = 'at'
         return super().form_valid(form)
 
-class NewsUpdate(UpdateView):
-    form_class = PostForm
-    model = Post
-    template_name = 'news_edit.html'
 
-class ArticleUpdate(UpdateView):
+class PostUpdate(UpdateView):
     form_class = PostForm
     model = Post
-    template_name = 'article_edit.html'
+
+    def get_template_names(self):
+        post = self.get_object()
+        if post.post_type == 'ns':
+            self.template_name = 'news_edit.html'
+        else:
+            self.template_name = 'article_edit.html'
+        return self.template_name
+
 
 class PostDelete(DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('post_list')
-
-
