@@ -87,7 +87,8 @@ class ArticleCreate(CreateView):
         return super().form_valid(form)
 
 
-class PostUpdate(UpdateView):
+class PostUpdate(PermissionRequiredMixin,UpdateView):
+    permission_required = 'news.change_post'
     form_class = PostForm
     model = Post
 

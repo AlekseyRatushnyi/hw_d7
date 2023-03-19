@@ -8,6 +8,9 @@ Post
 {% endblock title %}
 
 {% block content %}
+
+   <h5>Вы зашли как {{request.user}}</h5>
+
    <h1>Все главные новости на: {{ time_now|date:'M d Y' }}</h1>
    <h4>Всего новостей в ленте: {{ page_obj.paginator.count }} </h4>
    <h4>Публикаций на текущей странице: {{ posts|length}}</h4>
