@@ -4,7 +4,7 @@ from .models import Post
 from .filters import PostFilter
 from .forms import PostForm
 from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class PostsList(ListView):
@@ -20,24 +20,7 @@ class PostsList(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['time_now'] = datetime.utcnow()
-        # context['is_not_author'] = not self.request.user.groups.filter(name = 'authors').exists()
         return context
-
-class NewsList(ListView):
-    model = Post
-    ordering = '-time_create'
-    template_name = 'news.html'
-    context_object_name = 'posts'
-    paginate_by = 10  # вот так мы можем указать количество записей на странице
-
-    def get_filter(self):
-        return PostFilter(self.request.GET, queryset=super().get_queryset())
-
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
-        context['time_now'] = datetime.utcnow()
-        return context
-
 
 
 class PostDetail(DetailView):
@@ -62,7 +45,6 @@ class SearchList(ListView):
         context['filterset'] = self.filterset
         context['time_now'] = datetime.utcnow()
         return context
-
 
 
 class NewsCreate(CreateView):
