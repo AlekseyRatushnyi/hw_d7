@@ -1,0 +1,11 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+<br>
+{% if post.post_type == 'at' %}
+ <h1> Новости с таким номером не существует!</h1>
+{% elif post.post_type == 'ns'%}
+ <h1> Статьи с таким номером не существует!</h1>
+{% endif %}
+
+{% endblock content %}

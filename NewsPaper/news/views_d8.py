@@ -25,10 +25,9 @@ class PostsList(ListView):
 
 class NewsList(ListView):
     model = Post
-    queryset = Post.objects.filter(post_type='ns')
     ordering = '-time_create'
     template_name = 'news.html'
-    context_object_name = 'news'
+    context_object_name = 'posts'
     paginate_by = 10  # вот так мы можем указать количество записей на странице
 
     def get_filter(self):
@@ -39,21 +38,6 @@ class NewsList(ListView):
         context['time_now'] = datetime.utcnow()
         return context
 
-class ArticlesList(ListView):
-    model = Post
-    queryset = Post.objects.filter(post_type='at')
-    ordering = '-time_create'
-    template_name = 'articles.html'
-    context_object_name = 'articles'
-    paginate_by = 10  # вот так мы можем указать количество записей на странице
-
-    def get_filter(self):
-        return PostFilter(self.request.GET, queryset=super().get_queryset())
-
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
-        context['time_now'] = datetime.utcnow()
-        return context
 
 
 class PostDetail(DetailView):
@@ -62,41 +46,12 @@ class PostDetail(DetailView):
     context_object_name = 'post'
 
 
-class NewsDetail(DetailView):
-    model = Post
-    # template_name = 'post.html'
-    context_object_name = 'post'
-
-    def get_template_names(self):
-        post = self.get_object()
-        if post.post_type == 'ns':
-            self.template_name = 'post.html'
-        elif post.post_type == 'at':
-            self.template_name = 'errornews.html'
-        else:
-            self.template_name = 'page404.html'
-        return self.template_name
-
-class ArticleDetail(DetailView):
-    model = Post
-    # template_name = 'post.html'
-    context_object_name = 'post'
-
-    def get_template_names(self):
-        post = self.get_object()
-        if post.post_type == 'at':
-            self.template_name = 'post.html'
-        elif post.post_type == 'ns':
-            self.template_name = 'errornews.html'
-        else:
-            self.template_name = 'page404.html'
-        return self.template_name
-
-
 class SearchList(ListView):
     model = Post
+    ordering = '-time_create'
     template_name = 'search_page.html'
     context_object_name = 'posts'
+    paginate_by = 10
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -124,12 +79,11 @@ class NewsCreate(PermissionRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class ArticlesCreate(PermissionRequiredMixin, CreateView):
+class ArticleCreate(PermissionRequiredMixin, CreateView):
     permission_required = 'news.add_post'
     form_class = PostForm
     model = Post
     template_name = 'article_edit.html'
-    success_url = reverse_lazy('articles_list')
 
     def form_valid(self, form):
         article = form.save(commit=False)
@@ -141,16 +95,13 @@ class PostUpdate(PermissionRequiredMixin,UpdateView):
     permission_required = 'news.change_post'
     form_class = PostForm
     model = Post
-    success_url = reverse_lazy('post_list')
 
     def get_template_names(self):
         post = self.get_object()
         if post.post_type == 'ns':
             self.template_name = 'news_edit.html'
-        elif post.post_type == 'at':
-            self.template_name = 'article_edit.html'
         else:
-            self.template_name = 'page404.html'
+            self.template_name = 'article_edit.html'
         return self.template_name
 
 

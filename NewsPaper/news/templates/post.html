@@ -1,17 +1,24 @@
 <!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
-
+{% load custom_filters %}
 <!-- Название у нас будет Product -->
 {% block title %}
 Post
 {% endblock title %}
 
+
 <!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
 {% block content %}
+{% if post.post_type == 'at' %}
+ <h3>Полный текст выбранной статьи</h3>
+{% elif post.post_type == 'ns'%}
+ <h3>Полный текст выбранной новости</h3>
+{% endif %}
+
 <h3>{{ post.title }} </h3>
 <h5>{{ post.time_create|date:'d M Y' }}</h5>
 <hr>
-<i>{{ post.text_post }}</i>
+<i>{{ post.text_post|censor }}</i>
 
 {% endblock content %}
 
