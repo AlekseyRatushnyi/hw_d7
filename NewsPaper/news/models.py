@@ -4,26 +4,9 @@ from datetime import datetime
 from django.db.models import Avg, Count, Min, Sum
 from django.urls import reverse
 
-sport = 'sp'
-policy = 'py'
-education = 'ed'
-world = 'wd'
-economy = 'ec'
-health = 'hh'
-tech = 'th'
+
 news = 'ns'
 article = 'at'
-
-list_category = [
-    (sport, 'Спорт'),
-    (policy, 'Политика'),
-    (education, 'Образование'),
-    (world, 'Мир'),
-    (economy, 'Экономика'),
-    (health, 'Здоровье'),
-    (tech, 'Технологии'),
-
-]
 
 
 class Author(models.Model):
@@ -48,16 +31,11 @@ class Author(models.Model):
 
 
 class Category(models.Model):
-    category = models.CharField(max_length=2, choices=list_category, unique=True)
-    subscribers = models.ManyToManyField(User, through='CategorySubscriber')
+    name = models.CharField(max_length=255, unique=True)
+    subscribers = models.ManyToManyField(User, blank=True, related_name='categories')
 
     def __str__(self):
-        return f"{self.category}"
-
-
-class CategorySubscriber(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    subscriber = models.ForeignKey(User, on_delete=models.CASCADE)
+        return f"{self.name}"
 
 
 class Post(models.Model):
@@ -85,7 +63,10 @@ class Post(models.Model):
         return reverse('post_detail', args=[str(self.id)])
 
     def __str__(self):
-        return f'{self.title.title()}: {self.text[:20]}'
+        return f'{self.title.title()}: {self.text_post[:20]}'
+
+    def get_absolute_url(self):
+        return f'/posts/{self.id}'
 
 
 class PostCategory(models.Model):
@@ -107,3 +88,6 @@ class Comment(models.Model):
     def dislike(self):
         self.rating -= 1
         self.save()
+
+
+

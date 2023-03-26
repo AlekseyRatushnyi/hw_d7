@@ -8,33 +8,28 @@ Post
 {% endblock title %}
 
 {% block content %}
-
+        {% if is_not_subscriber %}
+            <p class="text-center"><a href="{% url 'subscribe' category.id %}" class="btn btn-secondary btn-sm">Подписаться</a></p>
+        {% endif %}
    <h5>Вы зашли как {{request.user}}</h5>
 
-   <h1>Все главные новости на: {{ time_now|date:'M d Y' }}</h1>
-   <h4>Всего новостей в ленте: {{ page_obj.paginator.count }} </h4>
-   <h4>Публикаций на текущей странице: {{ posts|length}}</h4>
-   <h3>Список новостей: </h3>
+   <h3>Список категорий: </h3>
    <hr>
-   {% if posts %}
+   {% if category_news_list %}
        <table>
            <tr>
-               <td><h6>Заголовок</h6></td>
-               <td><h6>Текст</h6></td>
-               <td><h6>Категории</h6></td>
-               <td><h6>Дата публикации</h6></td>
+               <td>Категории</td>
            </tr>
 
-           {% for post in posts %}
+           {% for post in category_news_list %}
            <tr>
-               <td>{{ post.title|censor }}</td>
                <td>
                    {% for category in post.category.all %}
-                         <a href="{% url 'category_list' category.id %}">{{ category }}</a>
+                    <a href="{% url 'category_list' category.id %}">{{ category }}</a>
                    {% endfor %}
                </td>
-               <td>{{ post.text_post|censor|truncatewords:20 }}</td>
-               <td>{{ post.time_create|date:'d M Y' }}</td>
+               <td>{{ post.name}}</td>
+               <td>{{ post.category}}</td>
            </tr>
            {% endfor %}
 
