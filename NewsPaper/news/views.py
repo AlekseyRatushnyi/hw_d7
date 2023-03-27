@@ -9,7 +9,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Post, Category
 from .filters import PostFilter
 from .forms import PostForm
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, resolve
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
 
@@ -152,7 +152,7 @@ class PostUpdate(PermissionRequiredMixin, UpdateView):
     success_url = reverse_lazy('post_list')
 
     def get_template_names(self):
-        post = self.get_object_or_404()
+        post = self.get_object()
         if post.post_type == 'ns':
             self.template_name = 'news_edit.html'
         elif post.post_type == 'at':
@@ -178,7 +178,7 @@ def upgrade_me(request):
     return redirect('/news')
 
 
-class CategoryListView(PostsList):
+class CategoryListView(ListView):
     model = Post
     template_name = 'category_list.html'
     context_object_name = 'category_news_list'
@@ -201,7 +201,7 @@ def subscribe(request, pk):
     category = Category.objects.get(id=pk)
     category.subscribers.add(user)
 
-    message = 'Вы успешно подписались на рассылку новостей и статей по выбранной категории: '
+    message = 'Вы успешно подписались на рассылку новостей по выбранной категории: '
     return render(request, 'subscribe.html', {'category': category, 'message': message})
 
 

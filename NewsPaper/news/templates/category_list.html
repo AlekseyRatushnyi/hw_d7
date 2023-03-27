@@ -13,7 +13,7 @@ Post
         {% endif %}
    <h5>Вы зашли как {{request.user}}</h5>
 
-   <h3>Список категорий: </h3>
+   <h3>Список новостей по выбранной категории: </h3>
    <hr>
    {% if category_news_list %}
        <table>
@@ -28,8 +28,7 @@ Post
                     <a href="{% url 'category_list' category.id %}">{{ category }}</a>
                    {% endfor %}
                </td>
-               <td>{{ post.name}}</td>
-               <td>{{ post.category}}</td>
+               <td>{{ post.text_post }}</td>
            </tr>
            {% endfor %}
 

@@ -20,8 +20,8 @@ Post
        <table>
            <tr>
                <td><h6>Заголовок</h6></td>
-               <td><h6>Текст</h6></td>
                <td><h6>Категории</h6></td>
+               <td><h6>Текст</h6></td>
                <td><h6>Дата публикации</h6></td>
            </tr>
 
@@ -30,7 +30,7 @@ Post
                <td>{{ post.title|censor }}</td>
                <td>
                    {% for category in post.category.all %}
-                         <a href="{% url 'category_list' category.id %}">{{ category }}</a>
+                    <a href="{% url 'category_list' category.id %}">{{ category }}</a>
                    {% endfor %}
                </td>
                <td>{{ post.text_post|censor|truncatewords:20 }}</td>

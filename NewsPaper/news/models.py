@@ -39,6 +39,7 @@ class Category(models.Model):
 
 
 class Post(models.Model):
+    objects = None
     list_type = [(news, 'Новости'), (article, 'Статья')]
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     post_type = models.CharField(max_length=2, choices=list_type)
