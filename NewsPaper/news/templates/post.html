@@ -9,6 +9,7 @@ Post
 
 <!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
 {% block content %}
+   <p class="text-left"><a href="."  class="btn btn-secondary btn-sm">Вернуться на главную</a></p>
 {% if post.post_type == 'at' %}
  <h3>Полный текст выбранной статьи</h3>
 {% elif post.post_type == 'ns'%}

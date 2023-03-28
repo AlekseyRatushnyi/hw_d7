@@ -14,7 +14,7 @@ Post
    <h1>Все главные новости на: {{ time_now|date:'M d Y' }}</h1>
    <h4>Всего новостей в ленте: {{ page_obj.paginator.count }} </h4>
    <h4>Публикаций на текущей странице: {{ posts|length}}</h4>
-   <h3>Список новостей: </h3>
+   <h3>Все главные <a href="news/" >новости</a> и <a href="articles/" >статьи</a>  </h3>
    <hr>
    {% if posts %}
        <table>
@@ -39,6 +39,7 @@ Post
            {% endfor %}
 
        </table>
+     <hr>
    {% else %}
        <h2>Новостей нет!</h2>
    {% endif %}

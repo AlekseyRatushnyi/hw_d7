@@ -7,28 +7,42 @@ News
 {% endblock title %}
 
 {% block content %}
+   <p class="text-left"><a href=".."  class="btn btn-secondary btn-sm">Вернуться на главную</a>
+       <a href="create/"  class="btn btn-secondary btn-sm">Создать новость</a>
    <h5>Вы зашли как {{request.user}}</h5>
 
    <h1>Все главные новости на: {{ time_now|date:'M d Y' }}</h1>
    <h4>Всего новостей в ленте: {{ page_obj.paginator.count }} </h4>
    <h4>Публикаций на текущей странице: {{ news|length}}</h4>
-   <h3>Список новостей: </h3>
+   <h3>Список новостей </h3>
+
+   </p>
+
 <hr>
    {% if news %}
 <table>
     <tr>
        <td><h6>Заголовок</h6></td>
+       <td><h6>Категории</h6></td>
        <td><h6>Текст</h6></td>
        <td><h6>Дата публикации</h6></td>
    </tr>
     {% for post in news %}
     <tr>
            <td>{{ post.title|censor }}</td>
+           <td>
+                   {% for category in post.category.all %}
+                    <a href="{% url 'category_list' category.id %}">{{ category }}</a>
+                   {% endfor %}
+           </td>
            <td>{{ post.text_post|censor|truncatewords:20 }}</td>
            <td>{{ post.time_create|date:'d M Y' }}</td>
     </tr>
+
     {% endfor %}
+
 </table>
+     <hr>
 
 {% else %}
        <h2>Новостей нет!</h2>

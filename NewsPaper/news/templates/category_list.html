@@ -8,8 +8,9 @@ Post
 {% endblock title %}
 
 {% block content %}
+<p class="text-left"><a href=".."  class="btn btn-secondary btn-sm">Вернуться на главную</a>
         {% if is_not_subscriber %}
-            <p class="text-center"><a href="{% url 'subscribe' category.id %}" class="btn btn-secondary btn-sm">Подписаться</a></p>
+            <a href="{% url 'subscribe' category.id %}" class="btn btn-secondary btn-sm">Подписаться</a></p>
         {% endif %}
    <h5>Вы зашли как {{request.user}}</h5>
 
