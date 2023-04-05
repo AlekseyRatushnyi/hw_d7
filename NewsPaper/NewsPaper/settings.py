@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'news.apps.NewsConfig',
-    'django_apscheduler'
+    'django_apscheduler',
 
 ]
 
@@ -137,16 +137,18 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
-
 ACCOUNT_FORMS = {'signup': 'sign.models.BasicSignupForm'}
 
 SITE_URL = 'http://127.0.0.1:8000/'
 
 EMAIL_HOST = 'smtp.yandex.ru'  # адрес сервера Яндекс-почты для всех один и тот же
 EMAIL_PORT = 465  # порт smtp сервера тоже одинаковый
-EMAIL_HOST_USER = 'AARatushnyi'  # ваше имя пользователя, например, если ваша почта user@yandex.ru, то сюда надо писать user, иными словами, это всё то что идёт до собаки
+EMAIL_HOST_USER = 'AARatushnyi@yandex.ru'
 EMAIL_HOST_PASSWORD = '04122012Matt#$'  # пароль от почты
 EMAIL_USE_SSL = True  # Яндекс использует ssl, подробнее о том, что это, почитайте в дополнительных источниках, но включать его здесь обязательно
+
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 ADMINS = [
     ('RatushnyiAA', 'RatushnyiAA@bk.ru'), ('RatushnyiAA1982', 'RatushnyiAA1982@gmail.com'),
@@ -158,9 +160,20 @@ MANAGERS = [
     # список всех менеджеров в формате ('имя', 'их почта')
 ]
 
-SERVER_EMAIL = 'AARatushnyi@yandex.ru'  # это будет у нас вместо аргумента FROM в массовой рассылке
-
 APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
 APSCHEDULER_RUN_NOW_TIMEOUT = 25  # Seconds
 
-DEFAULT_FROM_EMAIL = 'AARatushnyi@yandex.ru'
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'cache_files'),
+        'TIMEOUT': 30,
+    }
+}

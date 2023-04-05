@@ -11,13 +11,15 @@ Articles
        <a href="create/"  class="btn btn-secondary btn-sm">Создать статью</a>
    <h5>Вы зашли как {{request.user}}</h5>
 
-   <h1>Все главные статьи на: {{ time_now|date:'M d Y' }}</h1>
-   <h4>Всего статей в ленте: {{ page_obj.paginator.count }} </h4>
-   <h4>Публикаций на текущей странице: {{ articles|length}}</h4>
-   <h3>Список статей </h3>
+           <h1>Все главные статьи на: {{ time_now|date:'M d Y' }}</h1>
+           <h4>Всего статей в ленте: {{ page_obj.paginator.count }} </h4>
+           <h4>Публикаций на текущей странице: {{ articles|length}}</h4>
+           <h3>Список статей </h3>
+
+
 <hr>
    {% if articles %}
-<table>
+<table height="200">
     <tr>
        <td><h6>Заголовок</h6></td>
        <td><h6>Категории</h6></td>
@@ -41,7 +43,7 @@ Articles
 {% else %}
        <h2>Новостей нет!</h2>
    {% endif %}
-    <ul text-align = "start ">
+    <ul align="center">
     {# Добавляем пагинацию на страницу #}
 
    {# Информация о предыдущих страницах #}

@@ -10,14 +10,20 @@ Post
 {% block content %}
 
    <h5>Вы зашли как {{request.user}}</h5>
+    {% load cache %}
+        {% cache 300 menu %}
+                    {% block menu %}
+                       <h1>Все главные новости на: {{ time_now|date:'M d Y' }}</h1>
+                       <h4>Всего новостей в ленте: {{ page_obj.paginator.count }} </h4>
+                       <h4>Публикаций на текущей странице: {{ posts|length}}</h4>
+                    {% endblock menu %}
+        {% endcache %}
 
-   <h1>Все главные новости на: {{ time_now|date:'M d Y' }}</h1>
-   <h4>Всего новостей в ленте: {{ page_obj.paginator.count }} </h4>
-   <h4>Публикаций на текущей странице: {{ posts|length}}</h4>
    <h3>Все главные <a href="news/" >новости</a> и <a href="articles/" >статьи</a>  </h3>
+
    <hr>
    {% if posts %}
-       <table>
+       <table height="250" bgcolor="silver">
            <tr>
                <td><h6>Заголовок</h6></td>
                <td><h6>Категории</h6></td>
@@ -43,7 +49,7 @@ Post
    {% else %}
        <h2>Новостей нет!</h2>
    {% endif %}
-    <ul text-align = "start ">
+    <ul align="center">
     {# Добавляем пагинацию на страницу #}
 
    {# Информация о предыдущих страницах #}
