@@ -177,3 +177,5 @@ CACHES = {
         'TIMEOUT': 30,
     }
 }
+# if DEBUG:
+#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

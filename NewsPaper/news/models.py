@@ -60,11 +60,9 @@ class Post(models.Model):
     def preview(self):
         return f'{self.text_post[:124]}...'
 
-    # def get_absolute_url(self):
-    #     return reverse('post_detail', args=[str(self.id)])
 
     def __str__(self):
-        return f'{self.title.title()}: {self.text_post[:20]}'
+        return f'{self.title}: {self.text_post[:20]}'
 
     def get_absolute_url(self):
         return f'/posts/{self.id}'
@@ -72,6 +70,11 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs) # сначала вызываем метод родителя, чтобы объект сохранился
         cache.delete(f'post-{self.pk}') # затем удаляем его из кэша, чтобы сбросить его
+
+    def get_category(self):
+        return f'{self.category.all()}'
+
+    # return f'{self.category.all().values_list()[0][1]}'
 
 
 class PostCategory(models.Model):

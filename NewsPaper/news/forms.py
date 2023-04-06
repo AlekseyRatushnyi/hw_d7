@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 class PostForm(forms.ModelForm):
-    title = forms.CharField(min_length=20)
+    title = forms.CharField(min_length=2)
     author = Author.objects.all().values('user__username')
 
     class Meta:

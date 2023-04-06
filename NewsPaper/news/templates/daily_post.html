@@ -8,7 +8,10 @@
     <h2>Здравствуйте! Новые статьи за последнюю неделю</h2>
     <ul>
         {% for post in posts %}
-            <li><a href="{{ link }}{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+        <li>Название поста: {{ post.title }}</li>
+        <p>Начало статьи: {{ post.preview }}</p>
+        <p>Читать полностью: <a href="http://127.0.0.1:8000/posts/{{ post.pk }}">ссылка на статью</a></p>
+        <br>
         {% endfor %}
     </ul>
 </body>

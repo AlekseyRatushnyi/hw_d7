@@ -1,3 +1,11 @@
+
+celery -A NewsPaper purge
+celery -A NewsPaper worker -l info --pool=solo
+celery -A NewsPaper beat -l info
+
+
+
+----shell----
 python manage.py shell
 from django.db import connection
 from news.models import *

@@ -6,13 +6,14 @@ from django.core.mail import send_mail
 from django.shortcuts import redirect, get_object_or_404, render
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post, Category
+from .models import Post, Category, Author
 from .filters import PostFilter
 from .forms import PostForm
 from django.urls import reverse_lazy, resolve
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.http import HttpResponse
 from django.core.cache import cache
+from .tasks import new_post_subscription
 
 
 class PostsList(ListView):
@@ -132,7 +133,7 @@ class SearchList(ListView):
         return context
 
 
-class NewsCreate(PermissionRequiredMixin, CreateView):
+class NewsCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
     permission_required = 'news.add_post'
     form_class = PostForm
     model = Post
@@ -141,10 +142,13 @@ class NewsCreate(PermissionRequiredMixin, CreateView):
     def form_valid(self, form):
         news = form.save(commit=False)
         news.post_type = 'ns'
+        news.author = Author.objects.get(user_id=self.request.user.id)
+        news.save()
+        new_post_subscription.apply_async([news.pk])
         return super().form_valid(form)
 
 
-class ArticlesCreate(PermissionRequiredMixin, CreateView):
+class ArticlesCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
     permission_required = 'news.add_post'
     form_class = PostForm
     model = Post
@@ -154,6 +158,9 @@ class ArticlesCreate(PermissionRequiredMixin, CreateView):
     def form_valid(self, form):
         article = form.save(commit=False)
         article.post_type = 'at'
+        article.author = Author.objects.get(user_id=self.request.user.id)
+        article.save()
+        new_post_subscription.apply_async([article.pk])
         return super().form_valid(form)
 
 

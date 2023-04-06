@@ -1,18 +1,24 @@
-from django.core.mail import send_mail
 from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
 
-from .models import Category
 
+def send_notifications(preview, pk, title, subscribers):
+    html_content = render_to_string(
+        'post_created_email.html',
+        {
+            'text': preview,
+            'link': f'{settings.SITE_URL}/posts/{pk}'
 
-def send(user_email):
-        subject = "Тема"
-        message = "Текстовка"
-        from_email = settings.EMAIL_HOST_USER
-        recipient_list = [user_email]
-        send_mail(
-        subject,
-        message,
-        from_email,
-        recipient_list,
-        fail_silently=False,)
+        }
+    )
 
+    msg = EmailMultiAlternatives(
+        subject=title,
+        body='',
+        from_email=settings.DEFAULT_FROM_EMAIL,
+        to=subscribers
+    )
+
+    msg.attach_alternative(html_content, 'text/html')
+    msg.send()
