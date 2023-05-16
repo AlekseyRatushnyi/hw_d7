@@ -1,5 +1,5 @@
 {% extends 'flatpages/default.html' %}
-
+{% load i18n %}
 {% load custom_filters %}
 {# Импортируем модуль с нашим тегом #}
 
@@ -9,21 +9,37 @@ Post
 
 {% block content %}
 
-   <h5>Вы зашли как {{request.user}}</h5>
-    {% load cache %}
-        {% cache 300 menu %}
-                    {% block menu %}
-                       <h1>Все главные новости на: {{ time_now|date:'M d Y' }}</h1>
-                       <h4>Всего новостей в ленте: {{ page_obj.paginator.count }} </h4>
-                       <h4>Публикаций на текущей странице: {{ posts|length}}</h4>
-                    {% endblock menu %}
-        {% endcache %}
+    <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %}
+        <input type="hidden" name="next" value="{{ redirect_to }}">
 
-   <h3>Все главные <a href="news/" >новости</a> и <a href="articles/" >статьи</a>  </h3>
+        <select name="language" id="">
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+
+            {% for language in languages %}
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                    {{ language.name_local }} - {{ language.code }}
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="set">
+    </form>
+    <h1>{% trans "News" %} </h1>
+    <h2>{% trans "All news today" %} - {{ time_now|date:'M d Y' }}</h2>
+    <h3>{% trans "total news" %}: {{ page_obj.paginator.count }}</h3>
+    <h5>{% trans "You joined as" %}:  {{request.user}}</h5>
+<!--    {% load cache %}-->
+<!--        {% cache 300 menu %}-->
+                    {% block menu %}
+
+                    {% endblock menu %}
+<!--        {% endcache %}-->
+
+   <h3>{% trans "All main " %} <a href="news/"> {% trans "news" %} </a> и <a href="articles/" > {% trans "articles" %}  </a>  </h3>
 
    <hr>
    {% if posts %}
-       <table height="250" bgcolor="silver">
+       <table>
            <tr>
                <td><h6>Заголовок</h6></td>
                <td><h6>Категории</h6></td>
@@ -32,7 +48,7 @@ Post
            </tr>
 
            {% for post in posts %}
-           <tr>
+           <tr class="{% cycle 'blue' 'white' %}">
                <td>{{ post.title|censor }}</td>
                <td>
                    {% for category in post.category.all %}

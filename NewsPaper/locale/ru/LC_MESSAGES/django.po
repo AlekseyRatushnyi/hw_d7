@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-14 10:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\news\templates\articles.html:10 .\news\templates\news.html:26
+msgid "home"
+msgstr " Вернуться на главную"
+
+#: .\news\templates\articles.html:11
+#, fuzzy
+#| msgid "create news"
+msgid "create article"
+msgstr "Создать новость"
+
+#: .\news\templates\articles.html:13 .\news\templates\news.html:29
+#: .\news\templates\posts.html:30
+msgid "You joined as"
+msgstr "Вы зашли как"
+
+#: .\news\templates\articles.html:14
+#, fuzzy
+#| msgid "All news today"
+msgid "All articles today"
+msgstr "Все главные статьи на сегодня"
+
+#: .\news\templates\articles.html:15
+#, fuzzy
+#| msgid "articles"
+msgid "total articles"
+msgstr "всего статей"
+
+#: .\news\templates\articles.html:16 .\news\templates\news.html:32
+msgid "publications on the current page"
+msgstr "Публикаций на текущей странице"
+
+#: .\news\templates\news.html:27
+msgid "create news"
+msgstr "Создать новость"
+
+#: .\news\templates\news.html:30 .\news\templates\posts.html:28
+msgid "All news today"
+msgstr "Все главные новости на сегодня"
+
+#: .\news\templates\news.html:31 .\news\templates\posts.html:29
+msgid "total news"
+msgstr "Всего новостей"
+
+#: .\news\templates\posts.html:27
+msgid "News"
+msgstr "Новости"
+
+#: .\news\templates\posts.html:38
+msgid "All main "
+msgstr "Все главные"
+
+#: .\news\templates\posts.html:38
+msgid "news"
+msgstr "новости"
+
+#: .\news\templates\posts.html:38
+msgid "articles"
+msgstr "статьи"
+
+#: .\protect\views.py:25
+msgid "Hello world"
+msgstr "Привет Мир"
+
+#, fuzzy
+#~| msgid "news"
+#~ msgid "news list"
+#~ msgstr "список новостей"

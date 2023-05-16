@@ -1,0 +1,19 @@
+2023-05-15 21:39:59,670 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-05-15 21:40:03,173 news.views   ERROR    Test!!
+2023-05-15 21:42:38,168 news.views   ERROR    Test!!
+2023-05-15 21:42:38,382 django.utils.autoreload INFO     C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\NewsPaper\settings.py changed, reloading.
+2023-05-15 21:42:39,272 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-05-15 21:42:42,120 news.views   ERROR    Test!!
+2023-05-16 20:18:34,948 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-05-16 20:18:38,085 django.request WARNING  Not Found: /favicon.ico
+2023-05-16 20:19:03,359 news.views   ERROR    Test!!
+2023-05-16 20:19:04,893 news.views   ERROR    Test!!
+2023-05-16 20:19:35,454 django.utils.autoreload INFO     C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\news\views.py changed, reloading.
+2023-05-16 20:19:36,544 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-05-16 20:19:50,480 news.views   DEBUG    Test!!
+2023-05-16 20:22:05,043 django.utils.autoreload INFO     C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\NewsPaper\settings.py changed, reloading.
+2023-05-16 20:24:11,195 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-05-16 20:25:01,765 django.utils.autoreload INFO     C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\NewsPaper\settings.py changed, reloading.
+2023-05-16 20:34:09,759 news.views   WARNING  Test!!
+2023-05-16 20:41:49,721 news.views   ERROR    Test!!
+2023-05-16 20:41:52,967 news.views   ERROR    Test!!

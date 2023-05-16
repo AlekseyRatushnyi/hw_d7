@@ -1,7 +1,9 @@
 from django.urls import path
+
+from . import views
 from .views import PostsList, PostDetail, NewsCreate, PostUpdate, PostDelete, \
     SearchList, NewsList, NewsDetail, ArticlesList, ArticlesCreate, ArticleDetail, upgrade_me, CategoryListView, \
-    subscribe
+    subscribe, index_log
 
 from django.views.decorators.cache import cache_page
 
@@ -22,5 +24,6 @@ urlpatterns = [
     path('upgrade/', upgrade_me, name='upgrade'),
     path('categories/<int:pk>', CategoryListView.as_view(), name='category_list'),
     path('categories/<int:pk>/subscribe', subscribe, name='subscribe'),
+    path('log/', views.index_log, name='index_log'),
 ]
 

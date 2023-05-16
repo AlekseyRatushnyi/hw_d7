@@ -43,6 +43,7 @@ SITE_ID = 1
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -52,6 +53,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'NewsPaper.urls'
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
 
 TEMPLATES = [
     {
@@ -67,6 +72,11 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+LANGUAGES =[
+    ('en-us', 'English'),
+    ('ru', 'Русский')
 ]
 
 WSGI_APPLICATION = 'NewsPaper.wsgi.application'
@@ -102,9 +112,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -179,3 +189,112 @@ CACHES = {
 }
 # if DEBUG:
 #     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'style': '{',
+    'formatters': {
+        'fdebug': {
+            'format': '%(asctime)s - %(levelname)s - %(message)s',
+        },
+        'fwarning': {
+            'format': '%(asctime)s - %(levelname)s - %(message)s -%(pathname)s',
+        },
+        'ferror': {
+            'format': '%(asctime)s - %(levelname)s - %(message)s -%(pathname)s-%(exc_info)s'
+        },
+        'gfile': {
+            'format': '%(asctime)s - %(levelname)s - %(module)s - %(message)s'
+        },
+        'erfile': {
+            'format': '%(asctime)s - %(levelname)s - %(message)s -%(pathname)s-%(exc_info)s'
+        },
+        'srfile': {
+            'format': '%(asctime)s - %(levelname)s - %(module)s - %(message)s'
+        },
+        'mailfile': {
+            'format': '%(asctime)s - %(levelname)s - %(message)s - %(pathname)s'
+        },
+
+    },
+    'filters': {
+            'require_debug_true': {
+                '()': 'django.utils.log.RequireDebugTrue',
+            },
+            'require_debug_false': {
+                '()': 'django.utils.log.RequireDebugFalse',
+            }
+         },
+    'handlers': {
+        'fdebug': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'fdebug',
+            'filters': ['require_debug_true']
+        },
+        'fwarning': {
+            'level': 'WARNING',
+            'class': 'logging.StreamHandler',
+            'formatter': 'fwarning',
+            'filters': ['require_debug_true']
+        },
+        'ferror': {
+            'level': 'ERROR',
+            'class': 'logging.StreamHandler',
+            'formatter': 'ferror',
+            'filters': ['require_debug_true']
+        },
+        'gfile': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'formatter': 'gfile',
+            'filename': 'general.log',
+            'filters': ['require_debug_false']
+        },
+        'erfile': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'formatter': 'erfile',
+            'filename': 'errors.log',
+        },
+        'srfile': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'formatter': 'srfile',
+            'filename': 'security.log',
+        },
+        'mailfile': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'formatter': 'mailfile'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['fdebug', 'fwarning', 'ferror', 'gfile'],
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['erfile', 'mailfile'],
+            'propagate': True,
+        },
+        'django.server': {
+            'handlers': ['erfile', 'mailfile'],
+            'propagate': True,
+        },
+        'django.template': {
+            'handlers': ['erfile'],
+            'propagate': True,
+        },
+        'django.db_backends': {
+            'handlers': ['erfile'],
+            'propagate': True,
+        },
+        'django.security': {
+            'handlers': ['srfile'],
+            'propagate': True,
+        },
+    }
+}

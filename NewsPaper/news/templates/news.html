@@ -1,5 +1,5 @@
 {% extends 'flatpages/default.html' %}
-
+{% load i18n %}
 {% load custom_filters %}
 
 {% block title %}
@@ -7,14 +7,29 @@ News
 {% endblock title %}
 
 {% block content %}
-   <p class="text-left"><a href=".."  class="btn btn-secondary btn-sm">Вернуться на главную</a>
-       <a href="create/"  class="btn btn-secondary btn-sm">Создать новость</a>
-   <h5>Вы зашли как {{request.user}}</h5>
+<form action="{% url 'set_language' %}" method="POST"> {% csrf_token %}
+        <input type="hidden" name="next" value="{{ redirect_to }}">
 
-           <h1>Все главные новости на: {{ time_now|date:'M d Y' }}</h1>
-           <h4>Всего новостей в ленте: {{ page_obj.paginator.count }} </h4>
-           <h4>Публикаций на текущей странице: {{ news|length}}</h4>
-           <h3>Список новостей </h3>
+        <select name="language" id="">
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+
+            {% for language in languages %}
+                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                    {{ language.name_local }} - {{ language.code }}
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="set">
+</form>
+
+   <p class="text-left"><a href=".."  class="btn btn-secondary btn-sm"> {% trans "home" %} </a>
+       <a href="create/"  class="btn btn-secondary btn-sm"> {% trans "create news" %} </a>
+
+    <h5>{% trans "You joined as" %}:  {{request.user}}</h5>
+    <h2>{% trans "All news today" %} - {{ time_now|date:'M d Y' }}</h2>
+    <h3>{% trans "total news" %}: {{ page_obj.paginator.count }} </h3>
+    <h4>{% trans "publications on the current page" %}: {{ news|length}}</h4>
 
 
    </p>
@@ -29,7 +44,7 @@ News
        <td><h6>Дата публикации</h6></td>
    </tr>
     {% for post in news %}
-    <tr>
+    <tr class="{% cycle 'blue' 'white' %}">
            <td>{{ post.title|censor }}</td>
            <td>
                    {% for category in post.category.all %}

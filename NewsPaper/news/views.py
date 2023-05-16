@@ -1,5 +1,5 @@
 from datetime import datetime
-
+import logging
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
 from django.core.mail import send_mail
@@ -224,3 +224,8 @@ def subscribe(request, pk):
     return render(request, 'subscribe.html', {'category': category, 'message': message})
 
 
+logger = logging.getLogger(__name__)
+
+def index_log(request):
+    logger.error("Test!!!")
+    return HttpResponse("Hello, it's a log!!!")
