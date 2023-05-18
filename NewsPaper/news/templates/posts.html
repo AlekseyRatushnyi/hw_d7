@@ -41,10 +41,10 @@ Post
    {% if posts %}
        <table>
            <tr>
-               <td><h6>Заголовок</h6></td>
-               <td><h6>Категории</h6></td>
-               <td><h6>Текст</h6></td>
-               <td><h6>Дата публикации</h6></td>
+               <td><h6>{% trans "title" %} </h6></td>
+               <td><h6>{% trans "category" %} </h6></td>
+               <td><h6>{% trans "post" %}</h6></td>
+               <td><h6>{% trans "date create" %}</h6></td>
            </tr>
 
            {% for post in posts %}

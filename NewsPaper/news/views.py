@@ -229,3 +229,15 @@ logger = logging.getLogger(__name__)
 def index_log(request):
     logger.error("Test!!!")
     return HttpResponse("Hello, it's a log!!!")
+
+
+class IndexTranslate(View):
+    def get(self, request):
+        # . Translators: This message appears on the home page only
+        models = Category.objects.all()
+
+        context = {
+            'models': models,
+        }
+
+        return HttpResponse(render(request, 'indextranslate.html', context))

@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Post, Author, Category, Comment
+from modeltranslation.admin import TranslationAdmin
 
 # Обнуление рейтинга
 def nullfy_rating(modeladmin, request, queryset):
@@ -14,6 +15,12 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('post_type', 'title', 'time_create', 'rating') # добавляем примитивные фильтры в нашу админку
     search_fields = ('title', 'text_post') # Поля, в которых будет выполняться поиск
     actions = [nullfy_rating]
+
+class CategoryAdmin(TranslationAdmin):
+    model = Category
+
+class PostAdmin(TranslationAdmin):
+    model = Post
 
 # Register your models here.
 

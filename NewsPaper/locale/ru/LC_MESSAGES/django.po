@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-14 10:16+0300\n"
+"POT-Creation-Date: 2023-05-18 21:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,36 +20,56 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\news\templates\articles.html:10 .\news\templates\news.html:26
+#: .\news\templates\articles.html:25 .\news\templates\news.html:26
 msgid "home"
 msgstr " Вернуться на главную"
 
-#: .\news\templates\articles.html:11
+#: .\news\templates\articles.html:26
 #, fuzzy
 #| msgid "create news"
 msgid "create article"
 msgstr "Создать новость"
 
-#: .\news\templates\articles.html:13 .\news\templates\news.html:29
+#: .\news\templates\articles.html:28 .\news\templates\news.html:29
 #: .\news\templates\posts.html:30
 msgid "You joined as"
 msgstr "Вы зашли как"
 
-#: .\news\templates\articles.html:14
+#: .\news\templates\articles.html:29
 #, fuzzy
 #| msgid "All news today"
 msgid "All articles today"
 msgstr "Все главные статьи на сегодня"
 
-#: .\news\templates\articles.html:15
+#: .\news\templates\articles.html:30
 #, fuzzy
 #| msgid "articles"
 msgid "total articles"
 msgstr "всего статей"
 
-#: .\news\templates\articles.html:16 .\news\templates\news.html:32
+#: .\news\templates\articles.html:31 .\news\templates\news.html:32
 msgid "publications on the current page"
 msgstr "Публикаций на текущей странице"
+
+#: .\news\templates\articles.html:37 .\news\templates\news.html:41
+#: .\news\templates\posts.html:44
+msgid "title"
+msgstr "Заголовок"
+
+#: .\news\templates\articles.html:38 .\news\templates\news.html:42
+#: .\news\templates\posts.html:45
+msgid "category"
+msgstr "Категория"
+
+#: .\news\templates\articles.html:39 .\news\templates\news.html:43
+#: .\news\templates\posts.html:46
+msgid "post"
+msgstr "Текст поста"
+
+#: .\news\templates\articles.html:40 .\news\templates\news.html:44
+#: .\news\templates\posts.html:47
+msgid "date create"
+msgstr "дата создания"
 
 #: .\news\templates\news.html:27
 msgid "create news"
