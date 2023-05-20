@@ -1,0 +1,1601 @@
+2023-05-20 12:23:19,321 - ERROR - Internal Server Error: /posts/time/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'TypeError'>, TypeError('context must be a dict rather than datetime.'), <traceback object at 0x000001C2C9AA76C0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\news\views.py", line 250, in get
+    return HttpResponse(render(request, 'indextime.html', curent_time))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 57, in render
+    context = make_context(
+              ^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than datetime.
+2023-05-20 12:23:20,072 - ERROR - "GET /posts/time/ HTTP/1.1" 500 93624 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 13:57:03,997 - ERROR - Internal Server Error: /posts/time/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for '' not found. '' is not a valid view function or pattern name."), <traceback object at 0x00000167195DBFC0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\news\views.py", line 257, in post
+    return redirect('')
+           ^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+2023-05-20 13:57:04,770 - ERROR - "POST /posts/time/ HTTP/1.1" 500 96042 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 13:57:10,957 - ERROR - Internal Server Error: /posts/time/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for '' not found. '' is not a valid view function or pattern name."), <traceback object at 0x000001671A80D040>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\news\views.py", line 257, in post
+    return redirect('')
+           ^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+2023-05-20 13:57:11,628 - ERROR - "POST /posts/time/ HTTP/1.1" 500 96042 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 14:08:19,507 - ERROR - Internal Server Error: /accounts/signup/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'email'"), <traceback object at 0x000001F5B693DC40>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 248, in form_valid
+    self.user = form.save(self.request)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 45, in save
+    user_email.append(user.email)
+                      ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'email'
+2023-05-20 14:08:20,332 - ERROR - "POST /accounts/signup/ HTTP/1.1" 500 120246 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 14:10:24,920 - ERROR - Internal Server Error: /accounts/signup/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'ValueError'>, ValueError('Invalid address "[[...]]"'), <traceback object at 0x0000013168645000>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1791, in get_mailbox
+    token, value = get_name_addr(value)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1767, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1456, in get_local_part
+    token, value = get_dot_atom(value)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1365, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1334, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1794, in get_mailbox
+    token, value = get_addr_spec(value)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1640, in get_addr_spec
+    token, value = get_local_part(value)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1459, in get_local_part
+    token, value = get_word(value)
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1398, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 86, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1796, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 248, in form_valid
+    self.user = form.save(self.request)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 46, in save
+    send_greeting(user_email)
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 35, in send_greeting
+    msg.send()
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 131, in send_messages
+    sent = self._send(message)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 144, in _send
+    recipients = [
+                 ^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 145, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 88, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "[[...]]"
+2023-05-20 14:10:25,651 - ERROR - "POST /accounts/signup/ HTTP/1.1" 500 188562 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 14:23:29,136 - ERROR - Internal Server Error: /accounts/signup/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'ValueError'>, ValueError('Invalid address "[[...]]"'), <traceback object at 0x0000024BA94710C0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1791, in get_mailbox
+    token, value = get_name_addr(value)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1767, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1456, in get_local_part
+    token, value = get_dot_atom(value)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1365, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1334, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1794, in get_mailbox
+    token, value = get_addr_spec(value)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1640, in get_addr_spec
+    token, value = get_local_part(value)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1459, in get_local_part
+    token, value = get_word(value)
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1398, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 86, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1796, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 248, in form_valid
+    self.user = form.save(self.request)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 46, in save
+    send_greeting(user_email)
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 35, in send_greeting
+    msg.send()
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 131, in send_messages
+    sent = self._send(message)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 144, in _send
+    recipients = [
+                 ^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 145, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 88, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "[[...]]"
+2023-05-20 14:23:29,853 - ERROR - "POST /accounts/signup/ HTTP/1.1" 500 188583 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 14:42:33,103 - ERROR - Internal Server Error: /accounts/signup/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'ValueError'>, ValueError('Invalid address "[[...]]"'), <traceback object at 0x000001BB30A9E4C0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1791, in get_mailbox
+    token, value = get_name_addr(value)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1767, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1456, in get_local_part
+    token, value = get_dot_atom(value)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1365, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1334, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1794, in get_mailbox
+    token, value = get_addr_spec(value)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1640, in get_addr_spec
+    token, value = get_local_part(value)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1459, in get_local_part
+    token, value = get_word(value)
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1398, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 86, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1796, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 248, in form_valid
+    self.user = form.save(self.request)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 46, in save
+    send_greeting(user_email)
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 35, in send_greeting
+    msg.send()
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 131, in send_messages
+    sent = self._send(message)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 144, in _send
+    recipients = [
+                 ^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 145, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 88, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "[[...]]"
+2023-05-20 14:42:33,959 - ERROR - "POST /accounts/signup/ HTTP/1.1" 500 188438 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 14:44:18,508 - ERROR - Internal Server Error: /accounts/signup/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'ValueError'>, ValueError('Invalid address "[[...]]"'), <traceback object at 0x000001BB324C09C0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1791, in get_mailbox
+    token, value = get_name_addr(value)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1767, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1456, in get_local_part
+    token, value = get_dot_atom(value)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1365, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1334, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1794, in get_mailbox
+    token, value = get_addr_spec(value)
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1640, in get_addr_spec
+    token, value = get_local_part(value)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1459, in get_local_part
+    token, value = get_word(value)
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1398, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 86, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\AppData\Local\Programs\Python\Python311\Lib\email\_header_value_parser.py", line 1796, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '[[...]]'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 248, in form_valid
+    self.user = form.save(self.request)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 46, in save
+    send_greeting(user_email)
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 35, in send_greeting
+    msg.send()
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 131, in send_messages
+    sent = self._send(message)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 144, in _send
+    recipients = [
+                 ^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\backends\smtp.py", line 145, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 88, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "[[...]]"
+2023-05-20 14:44:19,227 - ERROR - "POST /accounts/signup/ HTTP/1.1" 500 188442 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 16:25:06,507 - ERROR - Internal Server Error: /accounts/signup/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'TypeError'>, TypeError("'EmailField' object is not iterable"), <traceback object at 0x00000277DF1D5C00>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 248, in form_valid
+    self.user = form.save(self.request)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 46, in save
+    send_greeting(self.fields["email"])
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 28, in send_greeting
+    msg = EmailMultiAlternatives(
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 459, in __init__
+    super().__init__(
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 217, in __init__
+    self.to = list(to)
+              ^^^^^^^^
+TypeError: 'EmailField' object is not iterable
+2023-05-20 16:25:06,541 - ERROR - "POST /accounts/signup/ HTTP/1.1" 500 134763 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 16:27:55,911 - ERROR - Internal Server Error: /accounts/signup/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'TypeError'>, TypeError("'EmailField' object is not iterable"), <traceback object at 0x000001847C4B3B40>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 248, in form_valid
+    self.user = form.save(self.request)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 46, in save
+    send_greeting(self.fields["email"])
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 28, in send_greeting
+    msg = EmailMultiAlternatives(
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 459, in __init__
+    super().__init__(
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 217, in __init__
+    self.to = list(to)
+              ^^^^^^^^
+TypeError: 'EmailField' object is not iterable
+2023-05-20 16:27:55,945 - ERROR - "POST /accounts/signup/ HTTP/1.1" 500 134758 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 16:34:32,545 - ERROR - Internal Server Error: /accounts/signup/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'TypeError'>, TypeError("'EmailField' object is not iterable"), <traceback object at 0x00000225FFC29DC0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\decorators.py", line 20, in wrap
+    resp = function(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 234, in dispatch
+    return super(SignupView, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 77, in dispatch
+    response = super(RedirectAuthenticatedUserMixin, self).dispatch(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 207, in dispatch
+    return super(CloseableSignupMixin, self).dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 105, in post
+    response = self.form_valid(form)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\allauth\account\views.py", line 248, in form_valid
+    self.user = form.save(self.request)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 46, in save
+    send_greeting(self.fields["email"])
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\sign\models.py", line 28, in send_greeting
+    msg = EmailMultiAlternatives(
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 459, in __init__
+    super().__init__(
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\mail\message.py", line 217, in __init__
+    self.to = list(to)
+              ^^^^^^^^
+TypeError: 'EmailField' object is not iterable
+2023-05-20 16:34:32,580 - ERROR - "POST /accounts/signup/ HTTP/1.1" 500 134747 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:11:22,064 - ERROR - Internal Server Error: /posts/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 28: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000002380222FF80>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'get_current_timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 28: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?
+2023-05-20 17:11:22,125 - ERROR - "GET /posts/ HTTP/1.1" 500 251870 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:11:49,269 - ERROR - Internal Server Error: /posts/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 27: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000002380211CD40>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'get_current_timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 27: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?
+2023-05-20 17:11:49,296 - ERROR - "GET /posts/ HTTP/1.1" 500 252101 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:11:50,492 - ERROR - Internal Server Error: /posts/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 27: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000002380204A3C0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'get_current_timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 27: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?
+2023-05-20 17:11:50,520 - ERROR - "GET /posts/ HTTP/1.1" 500 252101 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:12:28,309 - ERROR - Internal Server Error: /posts/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 27: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x0000022072079DC0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'get_current_timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 27: 'get_current_timezone', expected 'endblock'. Did you forget to register or load this tag?
+2023-05-20 17:12:28,350 - ERROR - "GET /posts/ HTTP/1.1" 500 251964 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:15:59,863 - ERROR - Internal Server Error: /posts/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 15: 'get_available_languages', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000001A05F06D840>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'get_available_languages'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'get_available_languages', expected 'endblock'. Did you forget to register or load this tag?
+2023-05-20 17:15:59,905 - ERROR - "GET /posts/ HTTP/1.1" 500 251365 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:34:37,232 - ERROR - Internal Server Error: /posts/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("'censor' is not a registered tag library. Must be one of:\naccount\nadmin_list\nadmin_modify\nadmin_urls\ncache\ncustom_filters\ncustom_tags\nflatpages\ni18n\nl10n\nlog\nsocialaccount\nstatic\ntz"), <traceback object at 0x0000018ECCDE3640>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 1026, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'censor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 1088, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 1028, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'censor' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+cache
+custom_filters
+custom_tags
+flatpages
+i18n
+l10n
+log
+socialaccount
+static
+tz
+2023-05-20 17:34:37,290 - ERROR - "GET /posts/ HTTP/1.1" 500 261774 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:35:37,211 - ERROR - Internal Server Error: /posts/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("'censor' is not a registered tag library. Must be one of:\naccount\nadmin_list\nadmin_modify\nadmin_urls\ncache\ncustom_filters\ncustom_tags\nflatpages\ni18n\nl10n\nlog\nsocialaccount\nstatic\ntz"), <traceback object at 0x0000019FE761C980>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 1026, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'censor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 1088, in load
+    lib = find_library(parser, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 1028, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'censor' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+cache
+custom_filters
+custom_tags
+flatpages
+i18n
+l10n
+log
+socialaccount
+static
+tz
+2023-05-20 17:35:37,268 - ERROR - "GET /posts/ HTTP/1.1" 500 262394 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:36:17,812 - ERROR - Internal Server Error: /posts/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Could not parse the remainder: '==' from 'language.code=='"), <traceback object at 0x000001BE9DD0B3C0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: 'language.code=='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\smartif.py", line 181, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '==' from 'language.code=='
+2023-05-20 17:36:17,876 - ERROR - "GET /posts/ HTTP/1.1" 500 303359 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:37:39,338 - ERROR - Internal Server Error: /posts/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Could not parse the remainder: '==' from 'tz=='"), <traceback object at 0x0000023D61CA6400>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: 'tz=='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 952, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 885, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\smartif.py", line 170, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\smartif.py", line 181, in translate_token
+    return self.create_var(token)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\defaulttags.py", line 888, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '==' from 'tz=='
+2023-05-20 17:37:39,400 - ERROR - "GET /posts/ HTTP/1.1" 500 294163 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:45:14,303 - ERROR - Internal Server Error: /posts/articles/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.utils.datastructures.MultiValueDictKeyError'>, MultiValueDictKeyError('timezone'), <traceback object at 0x000001D069394900>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\news\views.py", line 86, in post
+    request.session['django_timezone'] = request.POST['timezone']
+                                         ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'timezone'
+2023-05-20 17:45:14,329 - ERROR - "POST /posts/articles/ HTTP/1.1" 500 91966 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:45:33,369 - ERROR - Internal Server Error: /posts/articles/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.utils.datastructures.MultiValueDictKeyError'>, MultiValueDictKeyError('timezone'), <traceback object at 0x000001D0696895C0>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7new\NewsPaper\news\views.py", line 86, in post
+    request.session['django_timezone'] = request.POST['timezone']
+                                         ~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'timezone'
+2023-05-20 17:45:33,388 - ERROR - "POST /posts/articles/ HTTP/1.1" 500 91966 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None
+2023-05-20 17:51:44,299 - ERROR - Internal Server Error: /posts/articles/ -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\utils\log.py-(<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 10: 'trans', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000001BFCB597880>)
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'trans'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 10: 'trans', expected 'endblock'. Did you forget to register or load this tag?
+2023-05-20 17:51:44,344 - ERROR - "GET /posts/articles/ HTTP/1.1" 500 232384 -C:\Users\Ratus\moduleD\hw_d7\venv\Lib\site-packages\django\core\servers\basehttp.py-None

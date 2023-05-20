@@ -3,12 +3,13 @@ from django.urls import path
 from . import views
 from .views import PostsList, PostDetail, NewsCreate, PostUpdate, PostDelete, \
     SearchList, NewsList, NewsDetail, ArticlesList, ArticlesCreate, ArticleDetail, upgrade_me, CategoryListView, \
-    subscribe, index_log, IndexTranslate
+    subscribe, index_log, IndexTranslate, IndexTime
 
 from django.views.decorators.cache import cache_page
 
 urlpatterns = [
-    path('', cache_page(60)(PostsList.as_view()), name='post_list'),
+    path('', PostsList.as_view(), name='post_list'),
+    # path('', cache_page(60)(PostsList.as_view()), name='post_list'), При кешировании
     path('<int:pk>', PostDetail.as_view(), name='post_detail'),
     path('search/', SearchList.as_view(), name='search_publications'),
     path('news/', cache_page(60*5)(NewsList.as_view()), name='news_list'),
@@ -26,5 +27,6 @@ urlpatterns = [
     path('categories/<int:pk>/subscribe', subscribe, name='subscribe'),
     path('log/', views.index_log, name='index_log'),
     path('translate/', IndexTranslate.as_view(), name='translate'),
+    path('time/', IndexTime.as_view(), name='time'),
 ]
 

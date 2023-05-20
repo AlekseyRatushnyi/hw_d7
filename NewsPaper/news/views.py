@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Group
 from django.core.mail import send_mail
 from django.shortcuts import redirect, get_object_or_404, render
+from django.utils import timezone
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post, Category, Author
@@ -14,6 +15,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from django.http import HttpResponse
 from django.core.cache import cache
 from .tasks import new_post_subscription
+import pytz
 
 
 class PostsList(ListView):
@@ -30,7 +32,14 @@ class PostsList(ListView):
         context = super().get_context_data(*args, **kwargs)
         context['time_now'] = datetime.utcnow()
         # context['is_not_author'] = not self.request.user.groups.filter(name = 'authors').exists()
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('post_list')
+
 
 
 class NewsList(ListView):
@@ -47,8 +56,13 @@ class NewsList(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['time_now'] = datetime.utcnow()
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
 
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('news_list')
 
 class ArticlesList(ListView):
     model = Post
@@ -64,8 +78,13 @@ class ArticlesList(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['time_now'] = datetime.utcnow()
+        context['current_time'] = timezone.now()
+        context['timezones'] = pytz.common_timezones
         return context
 
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('articles_list')
 
 class PostDetail(DetailView):
     model = Post
@@ -226,6 +245,7 @@ def subscribe(request, pk):
 
 logger = logging.getLogger(__name__)
 
+
 def index_log(request):
     logger.error("Test!!!")
     return HttpResponse("Hello, it's a log!!!")
@@ -241,3 +261,15 @@ class IndexTranslate(View):
         }
 
         return HttpResponse(render(request, 'indextranslate.html', context))
+
+
+class IndexTime(View):
+    def get(self, request):
+        context = {'time': timezone.now(), 'timezones': pytz.common_timezones}
+
+        return HttpResponse(render(request, 'indextime.html', context))
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/')
+

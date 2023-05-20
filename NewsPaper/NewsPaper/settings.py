@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'news.apps.NewsConfig',
     'django_apscheduler',
+    'basic',
 
 ]
 
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'basic.middlewares.TimezoneMiddleware',
 ]
 
 ROOT_URLCONF = 'NewsPaper.urls'
@@ -188,8 +190,8 @@ CACHES = {
         'TIMEOUT': 30,
     }
 }
-# if DEBUG:
-#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 LOGGING = {

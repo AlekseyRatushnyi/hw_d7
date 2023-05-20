@@ -304,7 +304,6 @@ svg {
 table {
   caption-side: bottom;
   border-collapse: collapse;
-  box-shadow: 0px 0px 20px 10px grey;
 }
 
 caption {
@@ -328,7 +327,6 @@ th {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
-  padding-right: 10px;
 }
 
 label {
@@ -1429,11 +1427,11 @@ progress {
   }
 
   .offset-lg-1 {
-    margin-left: 10%;
+    margin-left: 8.33333333%;
   }
 
   .offset-lg-2 {
-    margin-left: 17%;
+    margin-left: 16.66666667%;
   }
 
   .offset-lg-3 {

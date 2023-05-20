@@ -42,8 +42,8 @@ class BasicSignupForm(SignupForm):
         user = super(BasicSignupForm, self).save(request)
         basic_group = Group.objects.get(name='common')
         basic_group.user_set.add(user)
-        user_email.append(user.email)
-        send_greeting(user_email)
+        # user_email.append(user_email)
+        # send_greeting(user_email)
         return user
 
 
